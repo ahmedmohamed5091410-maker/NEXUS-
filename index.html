@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS | المتجر الرائد للأزياء والإلكترونيات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Mesh Background -->
+    <div class="mesh-bg">
+        <div class="mesh-blob blob-1"></div>
+        <div class="mesh-blob blob-2"></div>
+        <div class="mesh-blob blob-3"></div>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+
+    <header class="navbar glass">
+        <div class="nav-inside">
+            <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">NEXUS</a></div>
+
+            <div class="nav-right">
+                <div class="cart-btn" id="cart-toggle">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+            <div class="nav-overlay" id="nav-overlay"></div>
+            <div class="mobile-menu" id="mobile-menu">
+                <button class="mobile-menu-close" id="mobile-menu-close"><i class="fas fa-times"></i></button>
+                <nav class="main-nav">
+                    <a href="index.html" class="active">الرئيسية</a>
+                    <a href="about.html">من نحن</a>
+                    <a href="faq.html">الأسئلة الشائعة</a>
+                    <a href="contact.html">اتصل بنا</a>
+                </nav>
+                <div class="mobile-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="ابحث عن منتجاتك...">
+                </div>
+            </div>
+
+            <div class="desktop-search search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input-desktop" placeholder="ابحث عن منتجاتك المفضلة...">
+            </div>
+            <nav class="main-nav desktop-nav">
+                <a href="index.html" class="active">الرئيسية</a>
+                <a href="about.html">من نحن</a>
+                <a href="faq.html">الأسئلة الشائعة</a>
+                <a href="contact.html">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <span class="tag">تشكيلة 2026 الحصرية</span>
+            <h1 class="text-gradient">تسوق أحدث المنتجات العصرية</h1>
+            <p>اكتشف مجموعتنا الحصرية من الإلكترونيات والأزياء بأفضل الأسعار والجودة المضمونة.</p>
+            <a href="#products-grid" class="btn-primary">تسوق الآن</a>
+        </div>
+    </section>
+
+    <main class="store-container">
+        <div class="filter-bar">
+            <button class="filter-btn active" data-cat="all">جميع المنتجات</button>
+            <button class="filter-btn" data-cat="electronics">إلكترونيات ذكية</button>
+            <button class="filter-btn" data-cat="fashion">أزياء عصرية</button>
+            <button class="filter-btn" data-cat="accessories">إكسسوارات متنوعة</button>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+            <!-- المنتجات ستُضاف هنا عبر JavaScript -->
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>NEXUS</h2>
+                <p>وجهتك الأولى للتسوق الإلكتروني الآمن. نقدم لك أحدث صيحات الموضة والإلكترونيات بأسعار لا تقبل المنافسة وبجودة تليق بك.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>روابط هامة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h3>تواصل معنا</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</li>
+                    <li><i class="fas fa-phone"></i> +20 100 000 0000</li>
+                    <li><i class="fas fa-envelope"></i> support@nexus-store.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NEXUS Store. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <div class="cart-panel" id="cart-panel">
+        <div class="panel-header">
+            <h3>سلة المشتريات</h3>
+            <button class="panel-close" id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="panel-body" id="cart-items">
+            <!-- عناصر السلة -->
+        </div>
+        <div class="panel-footer">
+            <div class="coupon-wrapper">
+                <input type="text" id="coupon-input" placeholder="أدخل كود الخصم (جرب NEXT20)">
+                <button id="apply-coupon">تطبيق</button>
+            </div>
+            <div class="price-summary">
+                <div class="price-row"><span>المجموع:</span><span id="subtotal-price">0 $</span></div>
+                <div class="price-row discount-row" id="discount-box" style="display:none;">
+                    <span>الخصم (20%):</span><span id="discount-price">-0 $</span>
+                </div>
+                <div class="price-row total-row"><span>الإجمالي النهائي:</span><span id="total-price">0 $</span></div>
+            </div>
+            <button class="checkout-trigger-btn" id="checkout-trigger">إتمام عملية الشراء <i class="fas fa-arrow-left"></i></button>
+        </div>
+    </div>
+
+    <div class="checkout-overlay" id="checkout-overlay">
+        <div class="checkout-wizard-card glass">
+            <button class="close-wizard" id="close-wizard">&times;</button>
+            
+            <div class="steps-indicator">
+                <div class="step-dot active" id="dot-1">1<span>الشحن</span></div>
+                <div class="step-line"></div>
+                <div class="step-dot" id="dot-2">2<span>الدفع</span></div>
+                <div class="step-line"></div>
+                <div class="step-dot" id="dot-3">3<span>النجاح</span></div>
+            </div>
+
+            <div class="wizard-steps-container">
+                <div class="wizard-step active" id="step-1">
+                    <h3>عنوان الشحن والتوصيل</h3>
+                    <form id="shipping-form" class="wizard-form">
+                        <div class="form-group">
+                            <label>الاسم الكامل</label>
+                            <input type="text" required placeholder="محمد أحمد">
+                        </div>
+                        <div class="form-group">
+                            <label>العنوان بالتفصيل</label>
+                            <input type="text" required placeholder="شارع جامعة الدول، القاهرة، مصر">
+                        </div>
+                        <div class="form-group">
+                            <label>رقم الهاتف</label>
+                            <input type="tel" required placeholder="+20 123 456 789">
+                        </div>
+                        <button type="submit" class="wizard-next-btn">المتابعة للدفع</button>
+                    </form>
+                </div>
+
+                <div class="wizard-step" id="step-2">
+                    <h3>بيانات البطاقة الائتمانية</h3>
+                    <form id="payment-form" class="wizard-form">
+                        <div class="form-group">
+                            <label>رقم البطاقة (Visa / Mastercard)</label>
+                            <div class="input-with-icon">
+                                <input type="text" id="card-number" maxlength="19" required placeholder="xxxx xxxx xxxx xxxx">
+                                <i class="fab fa-cc-visa card-brand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>تاريخ الانتهاء</label>
+                                <input type="text" id="card-expiry" maxlength="5" required placeholder="MM/YY">
+                            </div>
+                            <div class="form-group">
+                                <label>الرمز السري (CVV)</label>
+                                <input type="password" id="card-cvv" maxlength="3" required placeholder="***">
+                            </div>
+                        </div>
+                        <div class="wizard-buttons">
+                            <button type="button" class="wizard-back-btn" id="back-to-1">رجوع</button>
+                            <button type="submit" class="wizard-submit-btn">تأكيد الدفع <span id="checkout-final-amount"></span></button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="wizard-step text-center" id="step-3">
+                    <div class="success-checkmark">
+                        <div class="check-icon">
+                            <span class="icon-line line-tip"></span>
+                            <span class="icon-line line-long"></span>
+                            <div class="icon-circle"></div>
+                            <div class="icon-fix"></div>
+                        </div>
+                    </div>
+                    <h2>تم تأكيد طلبك بنجاح!</h2>
+                    <p class="success-msg">شكراً لتسوقك معنا. تم إرسال إيصال الدفع وتفاصيل الشحن إلى بريدك الإلكتروني.</p>
+                    <div class="invoice-box" id="invoice-details">
+                        <!-- تفاصيل الفاتورة -->
+                    </div>
+                    <button type="button" class="close-success-btn" id="finish-checkout">العودة للرئيسية</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="blur-backdrop" id="blur-backdrop"></div>
+
+    <!-- Chatbot -->
+    <button class="chatbot-toggler" id="chatbot-toggler">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+            <i class="fas fa-robot"></i>
+            <div>
+                <h3>المساعد الذكي NEXUS</h3>
+                <p>متصل الآن</p>
+            </div>
+            <button class="chatbot-close" id="chatbot-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot">مرحباً! أنا المساعد الذكي لمتجر NEXUS. كيف يمكنني مساعدتك في التسوق اليوم؟</div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chat-input" placeholder="اكتب رسالتك هنا...">
+            <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

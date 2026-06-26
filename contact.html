@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا | NEXUS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Mesh Background -->
+    <div class="mesh-bg">
+        <div class="mesh-blob blob-1"></div>
+        <div class="mesh-blob blob-2"></div>
+        <div class="mesh-blob blob-3"></div>
+    </div>
+    <header class="navbar glass">
+        <div class="nav-inside">
+            <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">NEXUS</a></div>
+            <div class="nav-right">
+                <a href="index.html" class="cart-btn" style="font-size:16px; text-decoration:none; padding: 8px 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px;">المتجر</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="nav-overlay" id="nav-overlay"></div>
+            <div class="mobile-menu" id="mobile-menu">
+                <button class="mobile-menu-close" id="mobile-menu-close"><i class="fas fa-times"></i></button>
+                <nav class="main-nav">
+                    <a href="index.html">الرئيسية</a>
+                    <a href="about.html">من نحن</a>
+                    <a href="faq.html">الأسئلة الشائعة</a>
+                    <a href="contact.html" class="active">اتصل بنا</a>
+                </nav>
+            </div>
+            <nav class="main-nav desktop-nav">
+                <a href="index.html">الرئيسية</a>
+                <a href="about.html">من نحن</a>
+                <a href="faq.html">الأسئلة الشائعة</a>
+                <a href="contact.html" class="active">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <section class="page-header">
+            <h1>اتصل بنا</h1>
+            <p>نحن هنا لمساعدتك. تواصل معنا في أي وقت وسنسعد بالرد على استفساراتك.</p>
+        </section>
+
+        <section class="page-content">
+            <div class="contact-grid">
+                <div class="contact-info-boxes">
+                    <div class="info-box glass">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>العنوان</h3>
+                        <p>شارع جامعة الدول، القاهرة، مصر</p>
+                    </div>
+                    <div class="info-box glass">
+                        <i class="fas fa-phone"></i>
+                        <h3>رقم الهاتف</h3>
+                        <p>+20 100 000 0000</p>
+                    </div>
+                    <div class="info-box glass">
+                        <i class="fas fa-envelope"></i>
+                        <h3>البريد الإلكتروني</h3>
+                        <p>support@nexus-store.com</p>
+                    </div>
+                </div>
+                <div class="contact-form-container glass">
+                    <h2>إرسال رسالة</h2>
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.'); this.reset();">
+                        <div class="form-group">
+                            <label>الاسم الكامل</label>
+                            <input type="text" required placeholder="أدخل اسمك هنا">
+                        </div>
+                        <div class="form-group">
+                            <label>البريد الإلكتروني</label>
+                            <input type="email" required placeholder="أدخل بريدك الإلكتروني">
+                        </div>
+                        <div class="form-group">
+                            <label>الموضوع</label>
+                            <input type="text" required placeholder="سبب التواصل">
+                        </div>
+                        <div class="form-group">
+                            <label>الرسالة</label>
+                            <textarea rows="5" required placeholder="اكتب رسالتك هنا..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">إرسال</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>NEXUS</h2>
+                <p>وجهتك الأولى للتسوق الإلكتروني الآمن. نقدم لك أحدث صيحات الموضة والإلكترونيات بأسعار لا تقبل المنافسة وبجودة تليق بك.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>روابط هامة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h3>تواصل معنا</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</li>
+                    <li><i class="fas fa-phone"></i> +20 100 000 0000</li>
+                    <li><i class="fas fa-envelope"></i> support@nexus-store.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NEXUS Store. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <!-- Chatbot -->
+    <button class="chatbot-toggler" id="chatbot-toggler">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+            <i class="fas fa-robot"></i>
+            <div>
+                <h3>المساعد الذكي NEXUS</h3>
+                <p>متصل الآن</p>
+            </div>
+            <button class="chatbot-close" id="chatbot-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot">مرحباً! أنا المساعد الذكي لمتجر NEXUS. كيف يمكنني مساعدتك اليوم؟</div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chat-input" placeholder="اكتب رسالتك هنا...">
+            <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    
+    <script src="chatbot.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>
